@@ -1,0 +1,200 @@
+/** initialize css counter */
+#write {
+    counter-reset: h2
+}
+
+/* h1 { */
+/*     counter-reset: h2 */
+/* } */
+
+h2 {
+    counter-reset: h3
+}
+
+h3 {
+    counter-reset: h4
+}
+
+h4 {
+    counter-reset: h5
+}
+
+h5 {
+    counter-reset: h6
+}
+
+/** put counter result into headings */
+#write h2:before {
+    counter-increment: h2;
+    content: counter(h2) ". "
+}
+
+/* #write h2:before { */
+/*     counter-increment: h2; */
+/*     content: counter(h1) "." counter(h2) ". " */
+/* } */
+
+#write h3:before,
+h3.md-focus.md-heading:before /** override the default style for focused headings */ {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3) ". "
+}
+
+#write h4:before,
+h4.md-focus.md-heading:before {
+    counter-increment: h4;
+    content: counter(h2) "." counter(h3) "." counter(h4) ". "
+}
+
+#write h5:before,
+h5.md-focus.md-heading:before {
+    counter-increment: h5;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "
+}
+
+#write h6:before,
+h6.md-focus.md-heading:before {
+    counter-increment: h6;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
+}
+
+/** override the default style for focused headings */
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+    color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    position: inherit;
+    left:initial;
+    float: none;
+    top:initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+h1 { font-size: 24px; border-bottom: 1px solid #ddd; }
+h2 { font-size: 20px; border-bottom: 1px solid #eee;   color: #108218;   text-align: center; }
+h3 { font-size: 18px; color: #103218; }
+h4 { font-size: 16px; }
+h5 { font-size: 16px; }
+h6 { font-size: 16px; color: #777; }
+
+/* pre { */
+/* padding: 10px; */
+/* line-height: 1em; */
+/* box-sizing: border-box; */
+/* background-color: #F8F8F8; */
+/* margin: 0px 0px 1.5em !important; */
+/* color: #333; */
+/* word-wrap: break-word!important; */
+/* overflow: auto; */
+/* } */
+/* /* pre code { */ */
+/* /* line-height: 1.75em; */ */
+/* /* white-space: pre; */ */
+/* /* box-sizing: border-box; */ */
+/* /* font-size: 14px; */ */
+/* /* font-family: monospace; */ */
+/* /* background: none;   } */ */
+/*  */
+/* table, dl, blockquote, q, ul, ol {   margin: 1.2em 0; } */
+/* ul, ol {   padding-left: 2em;   font-size: 15px;   padding-bottom: 1em; } */
+/* li {   margin: 0.5em 0;    font-size: 15px; } */
+/* /* li code{ */ */
+/* /* font-size: 15px; */ */
+/* /* line-height: 1.75em; */ */
+/* /* font-family: monospace; */ */
+/* /* color: rgb(199, 37, 78); */ */
+/* /* background-color: rgb(249, 242, 244); */ */
+/* /* padding: 3px 5px; */ */
+/* /* max-width: 100% !important; } */ */
+/*  */
+/*  /* Space paragraphs in a list the same as the list itself. */ */
+/* li p { */
+/*  /* Needs !important to override rule above. */ */
+/* margin: 0.5em 0 !important; */
+/* }； */
+/*  /* Smaller spacing for sub-lists */ */
+/* ul ul, ul ol, ol ul, ol ol {   margin: 0;   padding-left: 1em; } */
+/*  /* Use Roman numerals for sub-ordered-lists. (Like Github.) */ */
+/* ol ol, ul ol {   list-style-type: lower-roman; } */
+/* /* Use letters for sub-sub-ordered lists. (Like Github.) */ */
+/* ul ul ol, ul ol ol, ol ul ol, ol ol ol {   list-style-type: lower-alpha; } */
+/* /* p code { */ */
+/* /* font-size: 15px; */ */
+/* /* line-height: 1.75em; */ */
+/* /* max-width: 100%!important; */ */
+/* /* font-family: monospace; */ */
+/* /* color: #c7254e; */ */
+/* /* background-color: #f9f2f4; */ */
+/* /* padding-left:5px; */ */
+/* /* padding-right:5px; */ */
+/* /* padding-top:3px; */ */
+/* /* padding-bottom:3px; } */ */
+/* dl {   padding: 0; } */
+/* dl dt {   font-size: 15px;   font-weight: bold;   font-style: italic; } */
+/* dl dd {   margin: 0 0 1em;   padding: 0 1em; } */
+/* blockquote, q { */
+/* border-left: 2px solid #009a61; */
+/* background: #f6f6f6; */
+/* color: #555; */
+/* quotes: none; */
+/* line-height: 1.6; */
+/* word-wrap: break-word; */
+/* padding-bottom:1px; */
+/* padding-top:20px; */
+/* margin: 1.5em 0; } */
+/*  h1, h2, h3, h4, h5, h6 { */
+/*   margin: 1.3em 0 1em; */
+/*   padding: 0; */
+/*   font-weight: bold; */
+/* } */
+/* h1 {   font-size: 20px;   border-bottom: 1px solid #ddd; } */
+/* h2 {   font-size: 20px;   border-bottom: 1px solid #eee;   color: #108218;   text-align: center; } */
+/* h3 {   font-size: 18px;   color: #103218; } */
+/* h4 {   font-size: 16px; } */
+/* h5 {   font-size: 16px; } */
+/* h6 {   font-size: 16px;   color: #777; } */
+
+table {
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size:15px ;
+    font: inherit;
+    border: 0;
+}
+
+tbody {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table tr {
+    border: 0;
+    border-top: 1px solid #CCC;
+    background-color: white;
+    margin: 0;   padding: 0;
+}
+
+table tr th, table tr td {
+    font-size: 15px;
+    border: 1px solid #CCC;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+table tr th {
+    font-weight: bold;
+}
