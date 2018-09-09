@@ -253,20 +253,29 @@ table tr td:last-child {
     margin-bottom: 0;
 }
 
-.CodeMirror-gutters {
-    border-right: 1px solid #ddd;
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
 }
 
 .md-fences,
 code,
 tt {
-    border: 1px solid #dfe2e5;
+    border: 1px solid #e7eaed;
     background-color: #f8f8f8;
     border-radius: 3px;
     padding: 0;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
     padding: 2px 4px 0px 4px;
     font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 4px 2px 4px;
 }
 
 .md-fences {
@@ -276,6 +285,7 @@ tt {
     padding-top: 8px;
     padding-bottom: 6px;
 }
+
 
 .md-task-list-item > input {
   margin-left: -1.3em;
@@ -318,6 +328,10 @@ tt {
 	bottom: .375rem;
 }
 
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
 #write>h3.md-focus:before{
 	left: -1.5625rem;
 	top: .375rem;
@@ -337,14 +351,14 @@ tt {
 .md-image>.md-meta {
     /*border: 1px solid #ddd;*/
     border-radius: 3px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
     padding: 2px 0px 0px 4px;
     font-size: 0.9em;
     color: inherit;
 }
 
-.md-tag{
-	color: inherit;
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
 }
 
 .md-toc { 
@@ -366,10 +380,6 @@ tt {
     border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
     border-style: solid;
     border-width: 1px;
-}
-
-#md-notification:before {
-    top: 10px;
 }
 
 /** focus mode */

@@ -186,16 +186,13 @@ code,
 	color: #7a7a7a;
 }
 
-.md-fences .CodeMirror.CodeMirror-wrap {
-	top: -1.5em;
-    margin-bottom: -1.5em;
-}
-
 .md-fences {
 	padding: 1.125em;
 	margin-bottom: 0.88em;
 	font-size: 1rem;
 	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
 }
 
 blockquote {
@@ -496,4 +493,14 @@ a {
 .md-diagram-panel {
 	margin-top: 24px;
 	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
 }

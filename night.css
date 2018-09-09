@@ -23,6 +23,8 @@
     --item-hover-bg-color: #70717d;
     --item-hover-text-color: white;
     --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #4B535A;
 }
 
 html {
@@ -309,6 +311,15 @@ var {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
 pre.md-fences {
     padding: 10px 30px;
     margin-bottom: 20px;
@@ -317,6 +328,13 @@ pre.md-fences {
 
 .md-fences .code-tooltip {
     bottom: -3.2em;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
 }
 
 code,
@@ -812,11 +830,12 @@ footer {
 /*diagrams*/
 #write .md-focus .md-diagram-panel {
     border: 1px solid #ddd;
-    margin-left: -30px;
+    margin-left: -1px;
+    width: calc(100% + 2px);
 }
 
 /*diagrams*/
-#write.show-fences-line-number .md-focus .md-diagram-panel {
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
     margin-left: auto;
 }
 
@@ -897,4 +916,9 @@ footer {
     margin-left: -1.3em;
     margin-top: calc(1rem - 10px);
     -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
 }
